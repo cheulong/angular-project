@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="title">
+    <h1 class="title-text text-center mt-5">Address Search</h1>
+  </div>
+  <div class="form">
+    <h6>Login</h6>
+    <div class="form-group">
+      <input
+        #box
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="Enter password"
+        (keyup.enter)="onEnter(box.value)"
+      />
+    </div>
+  </div>
+  <p>{{ value }}</p>
+</div>
