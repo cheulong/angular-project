@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-around mt-2 mb-5">
+  <h3>House List</h3>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+    <button type="button" class="btn btn-secondary" (click)="logout()">
+      Logout
+    </button>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Area</th>
+      <th scope="col">Price</th>
+      <th scope="col">Price Per Square</th>
+      <th scope="col">Bedroom</th>
+      <th scope="col">Bathroom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let home of homes; index as i"
+      (click)="showDetail(home)"
+      class="home-hover"
+      (mouseenter)="mouseEnter(home)"
+      (mouseleave)="mouseLeave(home)"
+    >
+      <td>{{ home.id }}</td>
+      <td>{{ home.area }}</td>
+      <td>{{ home.price }}</td>
+      <td>{{ home.pricePerSqare }}</td>
+      <td>{{ home.numBedroom }}</td>
+      <td>{{ home.numBathroom }}</td>
+    </tr>
+  </tbody>
+</table>

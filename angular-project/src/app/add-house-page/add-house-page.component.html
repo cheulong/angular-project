@@ -1,3 +1,142 @@
-<p>
-  add-house-page works!
-</p>
+<div class="container mt-4">
+  <h4>Add new home</h4>
+  <form novalidate #heroForm="ngForm" (ngSubmit)="save()">
+    <div class="house-area form-group row">
+      <label for="area" class="col-sm-2 col-form-label"> Area </label>
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          type="text"
+          [(ngModel)]="home.area"
+          name="area"
+          required
+          id="area"
+        />
+      </div>
+    </div>
+
+    <div class="house-address form-group row">
+      <label for="address" class="col-sm-2 col-form-label">Address:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          type="text"
+          [(ngModel)]="home.address"
+          name="address"
+          required
+          id="address"
+        />
+      </div>
+    </div>
+    <div class="house-coordinate form-group row">
+      <label for="coordinate" class="col-sm-2 col-form-label"
+        >Coordinate:</label
+      >
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          type="text"
+          [(ngModel)]="home.lat"
+          name="coor"
+          required
+          id="coor"
+        />
+        <input
+          class="form-control"
+          type="text"
+          [(ngModel)]="home.lng"
+          name="coor"
+          required
+          id="coor"
+        />
+      </div>
+    </div>
+    <div class="house-price form-group row">
+      <label for="price" class="col-sm-2 col-form-label">House Price:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          type="text"
+          [(ngModel)]="home.price"
+          name="price"
+          required
+          id="price"
+        />
+      </div>
+    </div>
+    <div class="house-price-per-sqaure form-group row">
+      <label for="house-price-per-sqaure" class="col-sm-2 col-form-label"
+        >Price per Square:</label
+      >
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          type="text"
+          [(ngModel)]="home.pricePerSqare"
+          required
+          name="pricePerSqare"
+          id="pricePerSqare"
+        />
+      </div>
+    </div>
+    <div class="house-bedroom form-group row">
+      <label for="house-bedroom" class="col-sm-2 col-form-label"
+        >House Bedroom:</label
+      >
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          type="text"
+          [(ngModel)]="home.numBedroom"
+          name="numBedroom"
+          required
+          id="numBedroom"
+        />
+      </div>
+    </div>
+    <div class="house-bathroom form-group row">
+      <label for="house-bedroom" class="col-sm-2 col-form-label"
+        >House Bathroom:</label
+      >
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          type="text"
+          [(ngModel)]="home.numBathroom"
+          name="numBathroom"
+          id="numBathroom"
+          required
+        />
+      </div>
+    </div>
+    <div class="house-image form-group row">
+      <label for="house-image" class="col-sm-2 col-form-label">Image:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          type="text"
+          [(ngModel)]="home.image"
+          name="image"
+          required
+          id="image"
+        />
+      </div>
+    </div>
+
+    <br />
+    <button
+      type="submit"
+      class="btn btn-primary float-right"
+      [disabled]="heroForm.form.invalid"
+    >
+      Save
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary float-right mr-2"
+      (click)="goHomePage()"
+    >
+      Cancel
+    </button>
+  </form>
+</div>

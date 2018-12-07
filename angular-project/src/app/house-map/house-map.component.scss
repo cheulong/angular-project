@@ -1,0 +1,15 @@
+.house-map {
+  height: 100vh;
+  position: relative;
+  h1 {
+    z-index: 2;
+    position: absolute;
+  }
+  agm-map {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+  }
+}

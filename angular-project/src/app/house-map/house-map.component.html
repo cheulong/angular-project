@@ -1,0 +1,21 @@
+<div class="house-map">
+  <!-- this creates a google map on the page with the given lat/lng from -->
+  <!-- the component as the initial center of the map: -->
+  <agm-map [zoom]="13" [latitude]="18.801783" [longitude]="98.975254">
+    <agm-marker
+      [latitude]="18.801783"
+      [longitude]="98.975254"
+      [iconUrl]="icon"
+    ></agm-marker>
+    <agm-marker
+      [latitude]="18.844371"
+      [longitude]="98.990688"
+      [iconUrl]="icon"
+    ></agm-marker>
+    <agm-marker
+      [latitude]="18.847975"
+      [longitude]="98.976649"
+      [iconUrl]="icon"
+    ></agm-marker>
+  </agm-map>
+</div>

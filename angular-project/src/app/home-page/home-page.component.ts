@@ -1,3 +1,4 @@
+import { Home } from './../model/home.class';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+  home: Home;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit() {}
+  onmouseEnter(house) {
+    this.home = house;
   }
-
+  onmouseLeave(house) {}
 }

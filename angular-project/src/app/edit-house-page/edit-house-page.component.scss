@@ -1,0 +1,25 @@
+.home {
+  &-img {
+    width: 300px;
+    height: auto;
+    img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &-map {
+    height: 300px;
+    overflow: hidden;
+    width: 300px;
+  }
+}
+.home-info {
+  width: 100%;
+  margin: auto;
+  div {
+    height: 40px;
+    div {
+      width: 50%;
+    }
+  }
+}

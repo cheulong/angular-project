@@ -1,3 +1,55 @@
-<p>
-  view-house-page works!
-</p>
+<div class="container">
+  <h1>House detail</h1>
+
+  <br />
+  <div class="row" *ngIf="home">
+    <div class="col-md-6">
+      <div>
+        <div class="house-img"><img [src]="home.image" alt="" /></div>
+        <div class="house-map"><app-house-map></app-house-map></div>
+      </div>
+    </div>
+    <div class="col-md-6 house-info">
+      <div class="house-id row">
+        <div>Id:</div>
+        <div>{{ home.id }}</div>
+      </div>
+      <div class="house-area row">
+        <div>Area:</div>
+        <div>{{ home.area }}</div>
+      </div>
+      <div class="house-address row">
+        <div>Address:</div>
+        <div>{{ home.address }}</div>
+      </div>
+      <div class="house-coordinate row">
+        <div>Coordinate:</div>
+        <div>{{ home.lat }},{{ home.lng }}</div>
+      </div>
+      <div class="house-price row">
+        <div>House Price:</div>
+        <div>{{ home.price }}</div>
+      </div>
+      <div class="house-price-per-sqaure row">
+        <div>Price per Square:</div>
+        <div>{{ home.pricePerSqare }}</div>
+      </div>
+      <div class="house-bedroom row">
+        <div>Bedroom</div>
+        <div>{{ home.numBedroom }}</div>
+      </div>
+      <div class="house-bathroom row">
+        <div>Bathroom:</div>
+        <div>{{ home.numBathroom }}</div>
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <button type="button" class="btn btn-secondary" (click)="goBack()">
+    Back
+  </button>
+  <button type="button" class="btn btn-primary ml-2" (click)="edit()">
+    Edit
+  </button>
+</div>

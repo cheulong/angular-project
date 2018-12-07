@@ -1,3 +1,122 @@
-<p>
-  edit-house-page works!
-</p>
+<div class="container">
+  <h1>home detail</h1>
+
+  <br />
+  <div class="row">
+    <div class="col-md-4">
+      <div>
+        <div class="home-img"><img [src]="home.image" alt="" /></div>
+        <div class="home-map"><app-house-map></app-house-map></div>
+      </div>
+    </div>
+    <div class="col-md-8 home-info">
+      <form novalidate #heroForm="ngForm" (ngSubmit)="save()" *ngIf="home">
+        <div class="home-area form-group row">
+          <label for="area" class="col-sm-2 col-form-label"> Area </label>
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="home.area"
+              name="area"
+              required
+            />
+          </div>
+        </div>
+        <div class="home-address form-group row">
+          <label for="address" class="col-sm-2 col-form-label">Address:</label>
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="home.address"
+              required
+              name="address"
+            />
+          </div>
+        </div>
+        <div class="home-coordinate form-group row">
+          <label for="coordinate" class="col-sm-2 col-form-label"
+            >Coordinate:</label
+          >
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="home.coor"
+              required
+              name="coordinate"
+            />
+          </div>
+        </div>
+        <div class="home-price form-group row">
+          <label for="price" class="col-sm-2 col-form-label">home Price:</label>
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="home.price"
+              required
+              name="price"
+            />
+          </div>
+        </div>
+        <div class="home-price-per-sqaure form-group row">
+          <label for="home-price-per-sqaure" class="col-sm-2 col-form-label"
+            >Price per Square:</label
+          >
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="home.pricePerSqare"
+              required
+              name="home-price-per-sqaure"
+            />
+          </div>
+        </div>
+        <div class="home-bedroom form-group row">
+          <label for="home-bedroom" class="col-sm-2 col-form-label"
+            >home Bedroom:</label
+          >
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="home.numBedroom"
+              required
+              name="home-bedroom"
+            />
+          </div>
+        </div>
+        <div class="home-bedroom form-group row">
+          <label for="home-bedroom" class="col-sm-2 col-form-label"
+            >home Bedroom:</label
+          >
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="home.numBathroom"
+              required
+              name="home-bathroom"
+            />
+          </div>
+        </div>
+        <br />
+        <button
+          type="submit"
+          class="btn btn-primary float-right"
+          [disabled]="heroForm.form.invalid"
+        >
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+  <br />
+
+  <button type="button" class="btn btn-secondary" (click)="goBack()">
+    Back
+  </button>
+</div>
